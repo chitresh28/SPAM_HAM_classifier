@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="form">
+    <h3> SPAM/HAM classifier using Multinomial Naive Bayes </h3>
+    <form action="{{url_for('thankyou')}}">
+        <div class="messege">
+            <div class="L2">
+                <label for="first" class="L1" > Enter first text messege here </label>
+            </div>
+            <div>
+                <input type="text" name="first" class="form1">
+            </div>
+        </div>
+        
+        <div class="messege">
+            <div class="L2">
+                <label for="second" class="L1"> Enter second text messege here </label></div>
+            <div>
+                <input type="text" name="second" class="form1">
+            </div>
+        </div>
+        
+        
+        <div>
+            <input type="submit" value="Submit">
+        </div>
+
+    </form>
+</div>
+
+{% endblock %}
