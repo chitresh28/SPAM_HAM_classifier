@@ -2,6 +2,9 @@ from flask import Flask, render_template, request
 from nltk.stem import WordNetLemmatizer
 from nltk.corpus import stopwords
 import pickle
+import nltk
+
+nltk.download('stopwords')
 
 app=Flask(__name__)
 lm=WordNetLemmatizer()
