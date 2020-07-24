@@ -31,9 +31,6 @@ def thankyou():
     review = [lm.lemmatize(word) for word in review if not word in set(stopwords.words('english'))]
     review = ' '.join(review)
     corpus.append(review)
-    print(type(corpus))
-    print(corpus)
-
     filename = "TFIDF.pkl"
     file_obj = open(filename, 'rb')
     transformer = pickle.load(file_obj)
