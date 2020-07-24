@@ -5,6 +5,7 @@ import pickle
 import nltk
 
 nltk.download('stopwords')
+nltk.download('wordnet')
 
 app=Flask(__name__)
 lm=WordNetLemmatizer()
