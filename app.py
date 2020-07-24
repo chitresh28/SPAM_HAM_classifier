@@ -39,14 +39,9 @@ def thankyou():
     file_obj=open(filename, 'rb')
     classifier = pickle.load(file_obj)
     y_p = classifier.predict(X_tfidf)
-    print(y_p)
     first = y_p[0]
     second = y_p[1]
     return render_template('thankyou.html',first=first, second=second)
-
-@app.errorhandler(404)
-def page_not_found(e):
-    return render_template('404.html'),404
 
 if __name__=='__main__':
     app.run()
